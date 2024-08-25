@@ -1,0 +1,14 @@
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.6rem;
+}
+
+.summary div {
+  display: flex;
+  gap: 0.8rem;
+
+  font-size: 1.2rem;
+  color: var(--color-grey-light);
+}

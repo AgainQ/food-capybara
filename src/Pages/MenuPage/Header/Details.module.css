@@ -1,0 +1,32 @@
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detailText {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.ratings {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: var(--color-grey-light);
+}
+
+.detailText ion-icon {
+  color: var(--color-primary-dark);
+  height: 1.6rem;
+  width: 1.6rem;
+}

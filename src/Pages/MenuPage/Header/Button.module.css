@@ -1,0 +1,9 @@
+.btn:link,
+.btn:visited {
+  color: var(--color-primary-dark);
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: all 0.3s;
+}

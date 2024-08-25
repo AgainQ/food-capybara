@@ -1,0 +1,56 @@
+.box {
+  padding: 0 1.6rem;
+}
+
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  list-style: none;
+
+  font-size: 1.4rem;
+  margin-top: 1.2rem;
+
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*  */
+
+.priceDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  list-style: none;
+
+  font-size: 1.4rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.priceDetails li {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*  */
+
+.terms {
+  font-size: 1.4rem;
+  padding: 1.6rem 0;
+}
+
+.termsLink:link,
+.termsLink:visited {
+  text-decoration: none;
+  color: var(--color-primary-dark);
+}
+
+.termsLink:hover,
+.termsLink:active {
+}

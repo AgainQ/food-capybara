@@ -1,0 +1,49 @@
+.box {
+  padding: 0 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+.topingsBox {
+  background-color: var(--color-primary-light);
+  padding: 2.4rem 1.6rem;
+
+  border: 1px solid var(--color-grey-light-2);
+  border-radius: 9px;
+}
+
+.header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: 3.2rem;
+}
+
+.select {
+  margin-top: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.toppingsList {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+
+  font-size: 1.4rem;
+  /* margin-bottom: 3.2rem; */
+  list-style: none;
+}
+
+.topping {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toppingNameBox {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}

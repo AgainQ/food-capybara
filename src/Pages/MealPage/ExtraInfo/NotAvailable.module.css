@@ -1,0 +1,16 @@
+.select {
+  font-family: inherit;
+  font-size: 1.4rem;
+  color: var(--color-grey-dark);
+
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+
+  margin-top: 1.2rem;
+}
+
+.select:focus {
+  outline: none;
+}

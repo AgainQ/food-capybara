@@ -1,0 +1,42 @@
+.menuItem {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 0.6rem;
+
+  padding: 1.6rem 1.6rem;
+  cursor: pointer;
+}
+
+.menuItem:not(:last-child) {
+  border-bottom: 2px #efefef solid;
+}
+
+.name {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  color: var(--color-grey-dark);
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.price {
+  font-size: 1.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.ingredients {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: var(--color-grey-light-2);
+}
+
+/*  */
+
+.imgBox {
+  position: relative;
+}
+
+.img {
+  width: 100%;
+  border-radius: 12px;
+}

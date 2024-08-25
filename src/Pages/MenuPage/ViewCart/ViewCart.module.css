@@ -1,0 +1,11 @@
+.totalItems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.6rem;
+  height: 2.6rem;
+
+  border: 1px solid #fff;
+  border-radius: 50%;
+}

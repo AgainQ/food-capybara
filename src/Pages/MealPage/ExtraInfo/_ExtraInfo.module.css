@@ -1,0 +1,9 @@
+.extraInfo {
+  margin-top: 2.4rem;
+  padding: 0 1.6rem;
+  margin-bottom: 2.4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}

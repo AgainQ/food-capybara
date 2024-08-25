@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --color-primary: #e21a70;
+  --color-primary-dark: #b5155a;
+  --color-primary-light: #fdf2f8;
+
+  --color-grey: #555;
+  --color-grey-dark: #333;
+  --color-grey-light: #777;
+  --color-grey-light-2: #999;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  color: var(--color-grey);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.mt-md {
+  margin-top: 3.2rem;
+}
+
+.container {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+/* 
+.meals::-webkit-scrollbar {
+  height: 1rem;
+  cursor: pointer;
+}
+
+.meals::-webkit-scrollbar-track {
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.meals::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 10px;
+} 
+  */

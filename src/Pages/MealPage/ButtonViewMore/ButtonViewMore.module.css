@@ -1,0 +1,16 @@
+.btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.4rem;
+  color: var(--color-primary-dark);
+}
+
+.btn ion-icon {
+  width: 2rem;
+  height: 2rem;
+}

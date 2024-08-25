@@ -1,0 +1,21 @@
+.box {
+  padding: 0 1.6rem;
+}
+
+.boughtTogether {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2rem;
+  /* hm */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 2.4rem;
+}
+
+.text {
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+}

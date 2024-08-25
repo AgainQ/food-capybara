@@ -1,0 +1,31 @@
+.meals {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 1.6rem;
+}
+
+.meal {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.img {
+  height: 4.8rem;
+  border-radius: 9px;
+}
+
+.name {
+  max-width: 200px; /* Set a max width for the text */
+  white-space: normal; /* Allows text to break into multiple lines */
+  word-wrap: break-word; /* Forces the text to wrap when necessary */
+  word-break: break-word; /* Ensures words break when they're too long */
+  line-height: 1.2; /* Adjust line height for better readability */
+}
+
+.price {
+  margin-left: auto;
+}

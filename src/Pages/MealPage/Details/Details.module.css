@@ -1,0 +1,41 @@
+.imgBox {
+  height: 25rem;
+  overflow: hidden;
+  margin-top: -1rem;
+  /* transform: translateY(-2rem); */
+}
+
+.img {
+  width: 100%;
+}
+
+/*  */
+
+.descriptionBox {
+  padding: -0 1.6rem;
+  margin-top: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.6rem;
+}
+
+.name {
+  font-size: 2rem;
+  color: var(--color-grey-dark);
+}
+
+.price {
+  color: var(--color-grey-dark);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.ingredients {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}

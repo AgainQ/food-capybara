@@ -1,0 +1,32 @@
+.specialInstructions {
+  font-size: 1.4rem;
+}
+
+.text {
+  margin-top: 0.8rem;
+  line-height: 1.3;
+  margin-bottom: 1.6rem;
+}
+
+.textArea {
+  width: 100%;
+  height: 8rem;
+  border: 1px solid var(--color-grey-light-2);
+  border-radius: 6px;
+  padding: 1rem;
+
+  font-family: inherit;
+  font-size: 1.4rem;
+  color: var(--color-grey-dark);
+}
+
+.textArea:focus {
+  outline: none;
+}
+
+.charCount {
+  text-align: right;
+  margin-top: 0.4rem;
+  font-weight: 600;
+  color: var(--color-grey-light);
+}

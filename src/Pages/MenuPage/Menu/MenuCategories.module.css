@@ -1,0 +1,10 @@
+.category:not(:last-child) {
+  border-bottom: 10px #f7f7f7 solid;
+}
+
+.heading {
+  font-size: 3rem;
+  color: var(--color-grey-dark);
+  margin: 2rem 0 3.2rem;
+  padding: 0 1.6rem;
+}

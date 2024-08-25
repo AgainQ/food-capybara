@@ -1,0 +1,12 @@
+.btn {
+  border: none;
+  background-color: #fff;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn ion-icon {
+  color: var(--color-primary-dark);
+  width: 2.4rem;
+  height: 2.4rem;
+}

@@ -1,0 +1,70 @@
+.addToCart {
+  z-index: 100;
+  padding: 1.6rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.15);
+
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  background-color: #fff;
+}
+
+.btnGroup {
+  width: 33%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+
+  color: #fff;
+  background-color: #cacaca;
+
+  border: none;
+  border-radius: 50%;
+
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  line-height: 1;
+  transition: all 0.3s;
+}
+
+.btn ion-icon {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.4rem;
+}
+
+.btnAddToCart {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+
+  border: none;
+  border-radius: 9px;
+  flex-grow: 1;
+
+  background-color: #cacaca;
+  padding: 1.6rem 0;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btnColor {
+  background-color: #e11a70;
+}
+
+.counter {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-grey-dark);
+}

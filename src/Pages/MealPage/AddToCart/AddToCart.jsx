@@ -28,6 +28,8 @@ export default function AddToCart() {
 
   function handleAddToCard() {
     const meal = { ...activeMeal, amount, selectedToppings };
+    delete meal.toppings;
+    console.log(meal);
 
     addItemToCart(meal);
     navigate(-1);

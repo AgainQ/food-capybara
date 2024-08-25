@@ -1,6 +1,5 @@
 import { useCartStore } from '../Stores/CartStore';
 import { useDeliveryStore } from '../Stores/DeliveryStore';
-
 import { generateRandomId } from '../Utils/utils';
 
 export function usePrepareOrder() {

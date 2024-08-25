@@ -5,8 +5,6 @@ import { getAllMeals, randInt } from '../Utils/utils';
 // потом уберу
 
 export function useRandomMeals(meals, setState) {
-  console.log(meals);
-
   useEffect(() => {
     if (meals.length === 0) return;
 

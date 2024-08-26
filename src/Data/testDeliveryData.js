@@ -1,7 +1,7 @@
 const testAddress = {
-  street: 'Street Name',
-  city: 'City Name',
-  floor: 'Floor Number',
+  street: 'Улица',
+  city: 'Город',
+  floor: 'Этаж',
 };
 
 const tipOptions = [
@@ -15,8 +15,8 @@ const tipOptions = [
 ];
 
 const testDeliveryOptions = [
-  { type: 'Standard', time: '15-30', price: 0 },
-  { type: 'Priority', time: '10-20', price: 30 },
+  { type: 'Обычная доставка', time: '15-30', price: 0 },
+  { type: 'Быстрая доставка', time: '10-20', price: 30 },
 ];
 
 export { testAddress, tipOptions, testDeliveryOptions };

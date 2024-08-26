@@ -18,9 +18,10 @@ const url3 = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52959';
 
 const foodItems = [];
 
+
 // prettier-ignore
-const categories = ['Beef', 'Breakfast', 'Chicken', 'Dessert', 'Goat', 'Lamb', 'Miscellaneous',
-   'Pasta', 'Pork', 'Seafood', 'Side', 'Starter', 'Vegan', 'Vegetarian']
+const categories = ['Говядина', 'Завтрак', 'Курица', 'Десерт', 'Коза', 'Баранина', 'Разное',
+   'Паста', 'Свинина', 'Морепродукты', 'Гарнир', 'Закуска', 'Веганский', 'Вегетарианский']
 
 function randomInt(min, max) {
   const randInt = Math.floor(Math.random() * (max - min + 1)) + min;

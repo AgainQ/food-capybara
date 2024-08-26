@@ -18,6 +18,7 @@ const url3 = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=52959';
 
 const foodItems = [];
 
+
 // prettier-ignore
 const categories = ['Говядина', 'Завтрак', 'Курица', 'Десерт', 'Коза', 'Баранина', 'Разное',
    'Паста', 'Свинина', 'Морепродукты', 'Гарнир', 'Закуска', 'Веганский', 'Вегетарианский']

@@ -1,7 +1,7 @@
-import { useWebApp } from '@vkruglikov/react-telegram-web-app';
-
+import { useEffect, useState } from 'react';
 import Button from './Button';
 import styles from './Summary.module.css';
+import WebApp from '@twa-dev/sdk';
 
 // from api
 const summaryData = {
@@ -12,10 +12,14 @@ const summaryData = {
 
 export default function Summary() {
   const { distance, deliveryPrice: delPrice, minOrder } = summaryData;
+  const [userData, setUserData] = useState();
 
-  const WebApp = useWebApp();
-  WebApp.ready();
-  console.log(WebApp);
+  useEffect(() => {
+    const tgUser = WebApp.initDataUnsafe.user;
+    if (tgUser) {
+      setUserData(tgUser);
+    }
+  }, []);
 
   return (
     <div className={styles.summary}>
@@ -24,6 +28,14 @@ export default function Summary() {
         <span>{`฿ ${delPrice}.00 delivery |`}</span>
         <span>{`฿ ${minOrder}.00 Minimum`}</span>
       </div>
+      {userData && (
+        <div>
+          <span>ID: {userData.id}</span>
+          <span>First Name: {userData.first_name}</span>
+          <span>Last Name: {userData.last_name}</span>
+          <span>Username: {userData.username}</span>
+        </div>
+      )}
       <Button text="More info" />
     </div>
   );

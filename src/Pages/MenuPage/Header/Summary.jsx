@@ -22,6 +22,8 @@ export default function Summary() {
 
       // Access the user's data
       const user = window.Telegram.WebApp.initDataUnsafe.user;
+      console.log('user:');
+      console.log(user);
 
       if (user) {
         setUserr(user);

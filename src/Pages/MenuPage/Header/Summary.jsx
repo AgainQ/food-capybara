@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useWebApp } from '@vkruglikov/react-telegram-web-app';
 
 import Button from './Button';
 import styles from './Summary.module.css';
@@ -14,30 +15,9 @@ export default function Summary() {
   const { distance, deliveryPrice: delPrice, minOrder } = summaryData;
   const [userr, setUserr] = useState({});
 
-  useEffect(() => {
-    // Check if Telegram WebApp SDK is available
-    console.log(window.Telegram, window.Telegram.WebApp);
-    if (window.Telegram && window.Telegram.WebApp) {
-      // Initialize the Telegram WebApp SDK
-      window.Telegram.WebApp.ready();
-
-      // Access the user's data
-      const user = window.Telegram.WebApp.initDataUnsafe.user;
-      console.log('user:');
-      console.log(user);
-
-      if (user) {
-        setUserr(user);
-        console.log(`User ID: ${user.id}`);
-        console.log(`User Name: ${user.first_name} ${user.last_name}`);
-        console.log(`Username: ${user.username}`);
-      } else {
-        console.log('No user data available');
-      }
-    } else {
-      console.error('Telegram WebApp is not available.');
-    }
-  }, []); // Empty dependency array ensures this runs only once on mount
+  const WebApp = useWebApp();
+  WebApp.ready();
+  console.log(WebApp);
 
   return (
     <div className={styles.summary}>

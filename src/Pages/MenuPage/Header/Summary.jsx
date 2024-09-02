@@ -12,10 +12,12 @@ const summaryData = {
 
 export default function Summary() {
   const { distance, deliveryPrice: delPrice, minOrder } = summaryData;
-  const [userData, setUserData] = useState();
+  const [userData, setUserData] = useState(null);
 
   useEffect(() => {
+    console.log(WebApp);
     const tgUser = WebApp.initDataUnsafe.user;
+    console.log(tgUser);
     if (tgUser) {
       setUserData(tgUser);
     }

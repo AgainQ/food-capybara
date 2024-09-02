@@ -16,6 +16,7 @@ export default function Summary() {
 
   useEffect(() => {
     // Check if Telegram WebApp SDK is available
+    console.log(window.Telegram, window.Telegram.WebApp);
     if (window.Telegram && window.Telegram.WebApp) {
       // Initialize the Telegram WebApp SDK
       window.Telegram.WebApp.ready();

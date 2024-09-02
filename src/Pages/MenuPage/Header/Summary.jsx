@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { useWebApp } from '@vkruglikov/react-telegram-web-app';
 
 import Button from './Button';
@@ -13,7 +12,6 @@ const summaryData = {
 
 export default function Summary() {
   const { distance, deliveryPrice: delPrice, minOrder } = summaryData;
-  const [userr, setUserr] = useState({});
 
   const WebApp = useWebApp();
   WebApp.ready();
@@ -22,7 +20,6 @@ export default function Summary() {
   return (
     <div className={styles.summary}>
       <div>
-        <span>{`${userr?.username || 'no username'}`}</span>
         <span>{`${distance}km away |`}</span>
         <span>{`฿ ${delPrice}.00 delivery |`}</span>
         <span>{`฿ ${minOrder}.00 Minimum`}</span>

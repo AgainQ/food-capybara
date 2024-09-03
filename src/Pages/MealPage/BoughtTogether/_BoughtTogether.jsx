@@ -3,7 +3,14 @@ import HeadingTertiary from '../../../UI/HeadingTertiary/HeadingTertiary';
 import Tag from '../Tag/Tag';
 import Meals from './Meals';
 
+import { useGetMenu } from '../../../Hooks/useGetMenu';
+import { generateRandomMeals } from '../../../Utils/generateRandomMeals';
+import { useMemo } from 'react';
+
 export default function BoughtTogether() {
+  const { menu } = useGetMenu();
+  const recommendedMeals = useMemo(() => generateRandomMeals(menu), [menu]);
+
   return (
     <div className={styles.box}>
       <div className={styles.boughtTogether}>
@@ -16,7 +23,7 @@ export default function BoughtTogether() {
           <Tag />
         </header>
 
-        <Meals />
+        <Meals recommendedMeals={recommendedMeals} />
       </div>
     </div>
   );

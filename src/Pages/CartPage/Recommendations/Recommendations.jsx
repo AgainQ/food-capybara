@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useMenuStore } from '../../../Stores/MenuStore';
+import { useGetMenu } from '../../../Hooks/useGetMenu';
 import { useRandomMeals } from '../../../Hooks/useRandomMeals';
 
 import Button from './Button';
@@ -7,10 +7,10 @@ import HeadingTertiary from '../../../UI/HeadingTertiary/HeadingTertiary';
 import styles from './Recommendations.module.css';
 
 export default function Recommendations() {
-  const { meals } = useMenuStore();
+  const { menu } = useGetMenu();
   const [recommendedMeals, setRecommendedMeals] = useState([]);
 
-  useRandomMeals(meals, setRecommendedMeals);
+  useRandomMeals(menu, setRecommendedMeals);
 
   return (
     <div className={styles.recommendations}>

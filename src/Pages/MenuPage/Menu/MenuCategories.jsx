@@ -1,22 +1,26 @@
+import { useGetMenu } from '../../../Hooks/useGetMenu';
+import Spinner from '../../../UI/Spinner/Spinner';
+
 import MenuItem from './MenuItem';
 import styles from './MenuCategories.module.css';
-import { useMenuStore } from '../../../Stores/MenuStore';
 
 export default function MenuCategories() {
-  const meals = useMenuStore((state) => state.meals);
-  const categories = Object.keys(meals);
+  const { menu = [], isPending } = useGetMenu();
+  const categories = Object.keys(menu);
+
+  if (isPending) return <Spinner />;
 
   return (
     <div className={styles.categories}>
       {categories.map((category) => (
-        <MenuCategory meals={meals} category={category} key={category} />
+        <MenuCategory menu={menu} category={category} key={category} />
       ))}
     </div>
   );
 }
 
-function MenuCategory({ meals, category }) {
-  const foodItems = meals[category];
+function MenuCategory({ menu, category }) {
+  const foodItems = menu[category];
 
   return (
     <div className={styles.category}>

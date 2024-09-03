@@ -11,12 +11,12 @@ export function generateRandomId() {
 export function getAllMeals(meals) {
   const keys = Object.keys(meals);
   let allMeals = [];
-  keys.forEach(key => meals[key].forEach(i => allMeals.push(i)));
+  keys.forEach((key) => meals[key].forEach((i) => allMeals.push(i)));
   return allMeals;
 }
 
-export function categorizeMeals(meals) {
-  const categorizedMeals = meals.reduce((acc, meal) => {
+export function categorizeMenu(menu = []) {
+  const categorizedMenu = menu.reduce((acc, meal) => {
     const { category } = meal;
     if (!acc[category]) {
       acc[category] = [];
@@ -25,7 +25,7 @@ export function categorizeMeals(meals) {
     return acc;
   }, {});
 
-  return categorizedMeals;
+  return categorizedMenu;
 }
 
 export function sliceStringWithoutCuttingWords(inputString, maxLength) {

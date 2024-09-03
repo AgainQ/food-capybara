@@ -1,10 +1,10 @@
-import { useMenuStore } from '../../../Stores/MenuStore';
+import { useGetMenu } from '../../../Hooks/useGetMenu';
 
 import styles from './MenuNavigation.module.css';
 
 export default function MenuNavigation() {
-  const meals = useMenuStore((state) => state.meals);
-  const categories = Object.keys(meals);
+  const { menu } = useGetMenu();
+  const categories = Object.keys(menu);
 
   return (
     <nav className={styles.categories}>

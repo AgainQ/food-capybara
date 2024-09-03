@@ -8,7 +8,7 @@ import Spinner from '../../../UI/Spinner/Spinner';
 import styles from './_Header.module.css';
 
 export default function Header() {
-  const { restaurantInfo = {}, isPending } = useGetRestaurantInfo();
+  const { data: restaurantInfo = {}, isPending } = useGetRestaurantInfo();
   const { name = '' } = restaurantInfo;
 
   if (isPending) return <Spinner />;

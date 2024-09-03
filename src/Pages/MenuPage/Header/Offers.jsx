@@ -1,4 +1,3 @@
-import { useGetRestaurantInfo } from '../../../Hooks/useGetRestaurantInfo';
 import styles from './Offers.module.css';
 
 export default function Offers({ restaurantInfo }) {

@@ -1,5 +1,3 @@
-import { useGetRestaurantInfo } from '../../../Hooks/useGetRestaurantInfo';
-
 // import { useEffect, useState } from 'react';
 // import WebApp from '@twa-dev/sdk';
 import Button from './Button';

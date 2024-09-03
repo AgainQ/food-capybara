@@ -1,30 +1,16 @@
+import { useGetRestaurantInfo } from '../../../Hooks/useGetRestaurantInfo';
 import styles from './Offers.module.css';
 
-const offersData = [
-  {
-    id: 24,
-    title: 'Free Delivery',
-    text: 'minimum ฿ 149. Valid for all items. Auto applied.',
-    color: '#FDF3FE',
-    icon: 'diamond',
-  },
-  {
-    id: 37,
-    title: 'Stamp Cards',
-    text: 'Earn up to 200 points and more',
-    color: '#FFEDC5',
-    icon: 'apps',
-  },
-];
+export default function Offers({ restaurantInfo }) {
+  const { offers = [] } = restaurantInfo;
 
-export default function Offers() {
   return (
     <div className={styles.offers}>
-      {offersData.map(offer => (
+      {offers.map((offer) => (
         <Offer
           key={offer.id}
-          title={offer.title}
-          text={offer.text}
+          title={offer.name}
+          text={offer.description}
           color={offer.color}
           icon={offer.icon}
         />

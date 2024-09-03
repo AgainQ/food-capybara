@@ -2,6 +2,8 @@ import styles from './Details.module.css';
 import Button from './Button';
 
 export default function Details() {
+  // ratings, deliveryTime
+
   return (
     <div className={styles.details}>
       <div className={styles.detail}>

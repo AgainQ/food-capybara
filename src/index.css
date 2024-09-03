@@ -33,6 +33,16 @@ body {
   line-height: 1;
 }
 
+.ReactQueryDevtools {
+  font-size: 1.6rem;
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+}
+
 .hidden {
   display: none;
 }

@@ -8,6 +8,9 @@ export const useCartStore = create(
     addItemToCart: (item) =>
       set((state) => {
         const existingItem = state.itemsInCart.find((i) => i.id === item.id);
+
+        const { toppings, ...itemWithoutToppings } = item;
+
         if (existingItem) {
           return {
             itemsInCart: state.itemsInCart.map((i) =>
@@ -16,7 +19,7 @@ export const useCartStore = create(
           };
         }
         return {
-          itemsInCart: [...state.itemsInCart, { ...item, amount: 1 }],
+          itemsInCart: [...state.itemsInCart, { ...itemWithoutToppings, amount: 1 }],
         };
       }),
 

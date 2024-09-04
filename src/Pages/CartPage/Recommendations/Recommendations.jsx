@@ -1,16 +1,15 @@
-import { useState } from 'react';
 import { useGetMenu } from '../../../Hooks/useGetMenu';
-import { useRandomMeals } from '../../../Hooks/useRandomMeals';
+import { generateRandomMeals } from '../../../Utils/generateRandomMeals';
 
 import Button from './Button';
 import HeadingTertiary from '../../../UI/HeadingTertiary/HeadingTertiary';
 import styles from './Recommendations.module.css';
+import { useMemo } from 'react';
 
 export default function Recommendations() {
   const { menu } = useGetMenu();
-  const [recommendedMeals, setRecommendedMeals] = useState([]);
 
-  useRandomMeals(menu, setRecommendedMeals);
+  const recommendedMeals = useMemo(() => generateRandomMeals(menu), [menu]);
 
   return (
     <div className={styles.recommendations}>

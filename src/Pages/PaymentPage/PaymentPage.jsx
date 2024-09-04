@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router';
-import { useOrdersStore } from '../../Stores/OrdersStore';
+
+import { usePlaceOrder } from './usePlaceOrder';
 import { usePrepareOrder } from '../../Hooks/usePrepareOrder';
 
 import HeaderBase from '../../UI/HeaderBase/HeaderBase';
@@ -13,19 +14,21 @@ import OrderSummary from './OrderSummary/OrderSummary';
 
 export default function PaymentPage() {
   const navigate = useNavigate();
-  const placeOrder = useOrdersStore((state) => state.placeOrder);
 
+  const { placeOrder, isPlacing } = usePlaceOrder();
   const currentOrder = usePrepareOrder();
+  console.log(currentOrder);
 
   function handleClick() {
     placeOrder(currentOrder);
+    //reset STOREEE !!! here or in placeOrder
     navigate('/');
   }
 
   useEffect(() => window.scrollTo(0, 0), []);
 
   return (
-    <div style={{ backgroundColor: '#F7F7F7' }}>
+    <div style={{ backgroundColor: '#F7F7F7', minHeight: '100vh' }}>
       <HeaderBase heading="Checkout" className="colorGrey" />
       <DeliveryAddress />
       <DeliveryOptions />
@@ -33,7 +36,7 @@ export default function PaymentPage() {
       <RiderTip />
       <OrderSummary />
 
-      <CtaBase btnText="Place order" onClick={handleClick} />
+      <CtaBase btnText="Place order" onClick={handleClick} disabled={isPlacing} />
     </div>
   );
 }

@@ -1,8 +1,13 @@
 import styles from './Details.module.css';
 import Button from './Button';
+import { useNavigate } from 'react-router-dom';
 
 export default function Details() {
   // ratings, deliveryTime
+  const navigate = useNavigate();
+  function handleClick() {
+    navigate('orders');
+  }
 
   return (
     <div className={styles.details}>
@@ -29,6 +34,10 @@ export default function Details() {
           <span>Availables deals</span>
         </p>
       </div>
+
+      <button className={styles.ordersBtn} onClick={handleClick}>
+        ORDERS
+      </button>
     </div>
   );
 }

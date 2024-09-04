@@ -1,3 +1,8 @@
+.ordersBtn {
+  height: 4.8rem;
+  background-color: pink;
+}
+
 .details {
   display: flex;
   flex-direction: column;

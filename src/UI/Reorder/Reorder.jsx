@@ -6,12 +6,12 @@ import { formatPrice } from '../../Utils/utils';
 
 import ButtonPrimary from '../ButtonPrimary/ButtonPrimary';
 import HeadingTertiary from '../HeadingTertiary/HeadingTertiary';
-import Spinner from '../Spinner/Spinner';
+
 import styles from './Reorder.module.css';
 
 export default function Reorder() {
   const resetReorderStore = useReorderStore((state) => state.resetReorderStore);
-  const orderId = useReorderStore((state) => state.orderId);
+  const { orderId, selectedIDs } = useReorderStore();
   const { order = {}, isPending } = useGetOrder(orderId);
   const { items = [] } = order;
 
@@ -23,9 +23,7 @@ export default function Reorder() {
     resetReorderStore();
   }
 
-  if (isPending) return <Spinner />;
-
-  if (orderId)
+  if (selectedIDs)
     return (
       <div className={styles.reorder}>
         <HeadingTertiary>Заказать снова</HeadingTertiary>
@@ -35,7 +33,7 @@ export default function Reorder() {
           <ButtonPrimary className="block" onClick={handleAddToCart}>
             Add to cart
           </ButtonPrimary>
-          <ButtonPrimary className="block btnWhite" onClick={handleBackToMenu}>
+          <ButtonPrimary className="block" onClick={handleBackToMenu}>
             Back to menu
           </ButtonPrimary>
         </div>

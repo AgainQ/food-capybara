@@ -18,10 +18,12 @@ export default function ViewCart() {
 
   if (itemsInCart.length > 0)
     return (
-      <ButtonPrimary className="fixed" onClick={handleClick}>
-        <span className={styles.totalItems}>{totalAmount}</span>
-        <span className={styles.text}>Перейти в корзину</span>
-        <span className={styles.price}>{formatPrice(totalPrice)}</span>
-      </ButtonPrimary>
+      <div className={styles.box}>
+        <ButtonPrimary onClick={handleClick}>
+          <span className={styles.totalItems}>{totalAmount}</span>
+          <span className={styles.text}>Перейти в корзину</span>
+          <span className={styles.price}>{formatPrice(totalPrice)}</span>
+        </ButtonPrimary>
+      </div>
     );
 }

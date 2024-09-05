@@ -1,5 +1,6 @@
 // import { useEffect, useState } from 'react';
 // import WebApp from '@twa-dev/sdk';
+import { formatPrice } from '../../../Utils/utils';
 import Button from './Button';
 import styles from './Summary.module.css';
 
@@ -21,8 +22,8 @@ export default function Summary({ restaurantInfo }) {
     <div className={styles.summary}>
       <div>
         <span>{`0.2 км от вас |`}</span>
-        <span>{`฿ 10.00 доставка |`}</span>
-        <span>{`฿ ${minOrder}.00 мин. заказ`}</span>
+        <span>{`${formatPrice(10)} доставка |`}</span>
+        <span>{`${formatPrice(minOrder)} мин. заказ`}</span>
       </div>
       {/* {userData && (
         <div>

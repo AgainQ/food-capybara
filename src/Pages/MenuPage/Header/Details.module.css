@@ -1,6 +1,7 @@
 .ordersBtn {
   height: 4.8rem;
   background-color: var(--color-primary-light);
+  /* background-color: #e4e5fc; */
   border: 1px solid #ddd;
   border-radius: 9px;
   font-size: 1.4rem;

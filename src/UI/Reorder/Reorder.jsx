@@ -11,7 +11,7 @@ import styles from './Reorder.module.css';
 
 export default function Reorder() {
   const resetReorderStore = useReorderStore((state) => state.resetReorderStore);
-  const { orderId, selectedIDs } = useReorderStore();
+  const { orderId } = useReorderStore();
   const { order = {}, isPending } = useGetOrder(orderId);
   const { items = [] } = order;
 
@@ -23,7 +23,7 @@ export default function Reorder() {
     resetReorderStore();
   }
 
-  if (selectedIDs)
+  if (orderId)
     return (
       <div className={styles.reorder}>
         <HeadingTertiary>Заказать снова</HeadingTertiary>

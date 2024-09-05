@@ -3,6 +3,8 @@ import { useGetOrders } from '../useGetOrders';
 import HeadingTertiary from '../../../UI/HeadingTertiary/HeadingTertiary';
 import Spinner from '../../../UI/Spinner/Spinner';
 import styles from './OrdersPreview.module.css';
+import ReorderButton from '../ReorderButton/ReorderButton';
+import { useNavigate } from 'react-router';
 
 export default function OrdersPreview() {
   const { orders = [], isPending } = useGetOrders();
@@ -32,11 +34,16 @@ export default function OrdersPreview() {
 }
 
 function Order({ order }) {
+  const navigate = useNavigate();
   const imgUrl = order.items[0].img;
   const itemsString = order.items.reduce((acc, cur) => acc + cur.name + ', ', '');
 
+  function handleClick() {
+    navigate(order.id);
+  }
+
   return (
-    <div className={styles.order}>
+    <div className={styles.order} onClick={handleClick}>
       <header className={styles.header}>
         <img className={styles.img} src={imgUrl} alt="order-image" />
 
@@ -47,6 +54,8 @@ function Order({ order }) {
           <p className={styles.items}>{itemsString}</p>
         </div>
       </header>
+
+      <ReorderButton order={order} />
     </div>
   );
 }

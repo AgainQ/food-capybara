@@ -1,0 +1,144 @@
+.orderDetails {
+  min-height: 100vh - 8rem;
+  background-color: red;
+}
+
+.header {
+  background-color: #f7f7f7;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+.heading {
+  font-size: 1.8rem;
+  color: var(--color-grey-dark);
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.deliveredOn {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+}
+
+.infoBox {
+  display: flex;
+  align-items: start;
+  gap: 1.2rem;
+
+  font-size: 1.4rem;
+  padding: 0 1.6rem;
+}
+
+.infoBox:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+.infoBox ion-icon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-grey-dark);
+}
+
+.deliveryText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.deliveredTo {
+  color: var(--color-grey-light);
+}
+
+.address {
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.restName {
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.body {
+  padding: 0 1.6rem;
+}
+
+/*  ----- */
+
+.box {
+  padding: 0 1.6rem;
+}
+
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  list-style: none;
+
+  font-size: 1.4rem;
+  margin-top: 1.2rem;
+
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*  */
+
+.priceDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  list-style: none;
+
+  font-size: 1.4rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.priceDetails li {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ---- */
+
+.paymentDetailsBox {
+  font-size: 1.4rem;
+  margin-top: 1.6rem;
+}
+
+.paidWith {
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--color-grey-dark);
+  margin-bottom: 1.6rem;
+}
+
+.paymentDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.paymentDetails p {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.paymentDetails p ion-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.total {
+  font-weight: 600;
+  color: var(--color-grey-dark);
+}

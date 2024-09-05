@@ -6,9 +6,10 @@ import MenuPage from './Pages/MenuPage/MenuPage';
 import MealPage from './Pages/MealPage/MealPage';
 import CartPage from './Pages/CartPage/_CartPage';
 import PaymentPage from './Pages/PaymentPage/PaymentPage';
+import OrdersPage from './Pages/OrdersPage/OrdersPage';
+import OrderDetails from './Pages/OrdersPage/OrderDetails/OrderDetails';
 
 import ProtectedRoute from './Pages/ProtectedRoute';
-import OrdersPage from './Pages/OrdersPage/OrdersPage';
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ function App() {
             <Route index element={<MenuPage />} />
             <Route path="meal" element={<MealPage />} />
             <Route path="orders" element={<OrdersPage />} />
+            <Route path="orders/:id" element={<OrderDetails />} />
 
             <Route element={<ProtectedRoute />}>
               <Route path="cart" element={<CartPage />} />

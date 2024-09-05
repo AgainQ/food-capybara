@@ -1,0 +1,14 @@
+.reorderBtn {
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+
+  width: 100%;
+  background-color: var(--color-primary);
+  border: none;
+  padding: 0.8rem 0;
+  border-radius: 9px;
+  cursor: pointer;
+
+  margin-top: 1.6rem;
+}

@@ -7,4 +7,6 @@
   color: var(--color-grey-dark);
   margin: 2rem 0 3.2rem;
   padding: 0 1.6rem;
+
+  white-space: nowrap;
 }

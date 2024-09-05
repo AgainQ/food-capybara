@@ -15,28 +15,28 @@ export default function Details() {
         <p className={styles.detailText}>
           <ion-icon name="star-outline"></ion-icon>
           <span>5.0</span>
-          <span className={styles.ratings}>&middot; 37 ratings</span>
+          <span className={styles.ratings}>&middot; 37 отзывов</span>
         </p>
-        <Button text="See review" />
+        <Button text="Посмотреть" />
       </div>
 
       <div className={styles.detail}>
         <p className={styles.detailText}>
           <ion-icon name="time-outline"></ion-icon>
-          <span>Delivery: 5-20 minutes</span>
+          <span>Доставка: 30-60 минут</span>
         </p>
-        <Button text="Change" />
+        <Button text="Изменить" />
       </div>
 
-      <div className={styles.detail}>
+      {/* <div className={styles.detail}>
         <p className={styles.detailText}>
           <ion-icon name="pricetags-outline"></ion-icon>
           <span>Availables deals</span>
         </p>
-      </div>
+      </div> */}
 
       <button className={styles.ordersBtn} onClick={handleClick}>
-        ORDERS
+        Прошлые заказы
       </button>
     </div>
   );

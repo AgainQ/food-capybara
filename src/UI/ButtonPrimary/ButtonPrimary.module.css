@@ -25,3 +25,9 @@
   position: sticky;
   bottom: 0;
 }
+
+.btnWhite {
+  background-color: #fff;
+  color: var(--color-grey-dark);
+  border: 2px solid var(--color-grey-dark);
+}

@@ -8,6 +8,11 @@ export function generateRandomId() {
   return 'id_' + Math.random().toString(36);
 }
 
+export function formatPrice(price) {
+  const formatedPrice = `₽ ${price}`;
+  return formatedPrice;
+}
+
 export function getAllMeals(meals) {
   const keys = Object.keys(meals);
   let allMeals = [];

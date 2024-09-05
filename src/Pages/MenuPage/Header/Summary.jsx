@@ -20,9 +20,9 @@ export default function Summary({ restaurantInfo }) {
   return (
     <div className={styles.summary}>
       <div>
-        <span>{`0.2 km away |`}</span>
-        <span>{`฿ 11.00 delivery |`}</span>
-        <span>{`฿ ${minOrder}.00 Minimum`}</span>
+        <span>{`0.2 км от вас |`}</span>
+        <span>{`฿ 10.00 доставка |`}</span>
+        <span>{`฿ ${minOrder}.00 мин. заказ`}</span>
       </div>
       {/* {userData && (
         <div>
@@ -32,7 +32,7 @@ export default function Summary({ restaurantInfo }) {
           <span>Username: {userData.username}</span>
         </div>
       )} */}
-      <Button text="More info" />
+      <Button text="Подробнее" />
     </div>
   );
 }

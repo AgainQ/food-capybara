@@ -11,9 +11,12 @@
   font-weight: 600;
 
   width: 100%;
+  /* position: sticky; */
   position: fixed;
   bottom: 0;
   background-color: #fff;
+
+  max-width: 500px;
 }
 
 .textBox {

@@ -13,8 +13,8 @@ export default function Recommendations() {
 
   return (
     <div className={styles.recommendations}>
-      <HeadingTertiary>Popular with your order</HeadingTertiary>
-      <p className={styles.text}>Other customers also bought these</p>
+      <HeadingTertiary>Популярно с вашим заказом</HeadingTertiary>
+      <p className={styles.text}>Другие покупатели также покупали</p>
 
       <RecommendedMeals meals={recommendedMeals} />
     </div>

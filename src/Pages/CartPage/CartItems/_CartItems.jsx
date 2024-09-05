@@ -64,7 +64,7 @@ function ButtonAddMore() {
 
   return (
     <button className={styles.btn} onClick={handleClick}>
-      Add more items
+      Добавить еще
     </button>
   );
 }
@@ -78,7 +78,7 @@ function ButtonClearCart() {
 
   return (
     <button className={styles.btn} onClick={handleClick}>
-      Clear cart
+      Очистить
     </button>
   );
 }

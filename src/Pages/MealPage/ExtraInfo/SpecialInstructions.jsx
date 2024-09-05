@@ -13,17 +13,17 @@ export default function SpecialInstructions() {
   return (
     <div className={styles.specialInstructions}>
       <HeadingTertiary>
-        <label htmlFor="special-request">Special instructions</label>
+        <label htmlFor="special-request">Особые пожелания</label>
       </HeadingTertiary>
       <p className={styles.text}>
-        Special requests are subject to the restaurant's approval. <br /> Tell us
-        here.
+        Специальные запросы выполняются по усмотрению ресторана. Сообщите о них
+        здесь.
       </p>
       <textarea
         onChange={handleTextAreaChange}
         className={styles.textArea}
         id="special-request"
-        placeholder="e.g. no sauce"
+        placeholder="Ваши пожелания..."
         maxLength="200"
       ></textarea>
       <p className={styles.charCount}>{`${request.length}/200`}</p>

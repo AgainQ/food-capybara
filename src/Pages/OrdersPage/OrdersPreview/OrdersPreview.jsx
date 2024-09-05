@@ -16,14 +16,14 @@ export default function OrdersPreview() {
 
   return (
     <div className={styles.box}>
-      <HeadingTertiary>Active orders</HeadingTertiary>
+      <HeadingTertiary>Активные заказы</HeadingTertiary>
       <div className={styles.orders}>
         {pendingOrders.map((order) => (
           <Order order={order} key={order.id} />
         ))}
       </div>
 
-      <HeadingTertiary>Past orders</HeadingTertiary>
+      <HeadingTertiary>Завершенные заказы</HeadingTertiary>
       <div className={styles.orders}>
         {completedOrders.map((order) => (
           <Order order={order} key={order.id} />

@@ -1,7 +1,7 @@
 const testAddress = {
-  street: 'Street Name',
-  city: 'City Name',
-  floor: 'Floor Number',
+  street: 'Улица Пушкинаб 48',
+  city: 'Москва',
+  floor: '5 этаж',
 };
 
 const tipOptions = [
@@ -15,8 +15,8 @@ const tipOptions = [
 ];
 
 const testDeliveryOptions = [
-  { type: 'Standard', time: '15-30', price: 0 },
-  { type: 'Priority', time: '10-20', price: 30 },
+  { type: 'Стандартная', time: '30-60', price: 0 },
+  { type: 'Быстрая', time: '20-40', price: 30 },
 ];
 
 export { testAddress, tipOptions, testDeliveryOptions };

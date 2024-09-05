@@ -1,6 +1,7 @@
 import { useDeliveryStore } from '../../../Stores/DeliveryStore';
 
 import HeadingTertiary from '../../../UI/HeadingTertiary/HeadingTertiary';
+import { formatPrice } from '../../../Utils/utils';
 import styles from './DeliveryOptions.module.css';
 
 export default function DeliveryOptions() {
@@ -37,9 +38,11 @@ function DeliveryOption({ option }) {
       >
         <input type="checkbox" id={type} checked={isCheck} onChange={handleCheck} />
         <p className={styles.deliveryType}>{type}</p>
-        <p className={styles.deliveryTime}>{`${time} mins`}</p>
+        <p className={styles.deliveryTime}>{`${time} минут`}</p>
 
-        {price > 0 && <p className={styles.deliveryPrice}>{`+ ฿ ${price}.00`}</p>}
+        {price > 0 && (
+          <p className={styles.deliveryPrice}>{`+ ${formatPrice(price)}`}</p>
+        )}
       </label>
     </li>
   );

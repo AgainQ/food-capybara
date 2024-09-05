@@ -28,15 +28,26 @@ export default function PaymentPage() {
   useEffect(() => window.scrollTo(0, 0), []);
 
   return (
-    <div style={{ backgroundColor: '#F7F7F7', minHeight: '100vh' }}>
-      <HeaderBase heading="Checkout" className="colorGrey" />
+    <div
+      style={{
+        backgroundColor: '#F7F7F7',
+        minHeight: '100vh',
+        position: 'relative',
+        paddingBottom: '11rem',
+      }}
+    >
+      <HeaderBase heading="Оплата" className="colorGrey" />
       <DeliveryAddress />
       <DeliveryOptions />
       {/* <PaymentMethod /> */}
       <RiderTip />
       <OrderSummary />
 
-      <CtaBase btnText="Place order" onClick={handleClick} disabled={isPlacing} />
+      <CtaBase
+        btnText="Отправить заказ"
+        onClick={handleClick}
+        disabled={isPlacing}
+      />
     </div>
   );
 }

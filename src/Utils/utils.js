@@ -9,7 +9,7 @@ export function generateRandomId() {
 }
 
 export function formatPrice(price) {
-  const formatedPrice = `₽ ${price}`;
+  const formatedPrice = `${price} ₽`;
   return formatedPrice;
 }
 

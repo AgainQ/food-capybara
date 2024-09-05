@@ -1,8 +1,9 @@
 import { useNavigate } from 'react-router-dom';
+import { useCartStore } from '../../../Stores/CartStore';
 
+import { formatPrice } from '../../../Utils/utils';
 import ButtonPrimary from '../../../UI/ButtonPrimary/ButtonPrimary';
 import styles from './ViewCart.module.css';
-import { useCartStore } from '../../../Stores/CartStore';
 
 export default function ViewCart() {
   const navigate = useNavigate();
@@ -19,8 +20,8 @@ export default function ViewCart() {
     return (
       <ButtonPrimary className="fixed" onClick={handleClick}>
         <span className={styles.totalItems}>{totalAmount}</span>
-        <span className={styles.text}>View your cart</span>
-        <span className={styles.price}>{`฿ ${totalPrice}.00`}</span>
+        <span className={styles.text}>Перейти в корзину</span>
+        <span className={styles.price}>{formatPrice(totalPrice)}</span>
       </ButtonPrimary>
     );
 }

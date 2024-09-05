@@ -55,7 +55,7 @@ export default function AddToCart() {
         disabled={!isAllowedToAdd}
         onClick={handleAddToCard}
       >
-        Add to cart
+        Добавить в корзину
       </button>
     </div>
   );

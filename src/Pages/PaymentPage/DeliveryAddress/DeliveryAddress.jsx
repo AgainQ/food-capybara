@@ -5,7 +5,7 @@ import styles from './DeliveryAddress.module.css';
 export default function DeliveryAddress() {
   return (
     <div className={styles.box}>
-      <HeadingTertiary>Delivery address</HeadingTertiary>
+      <HeadingTertiary>Адрес доставки</HeadingTertiary>
 
       <figure className={styles.figure}>
         <div className={styles.wrapper}>
@@ -29,7 +29,7 @@ function AddressBox() {
       <ion-icon name="map-outline"></ion-icon>
 
       <div className={styles.addressDetails}>
-        <p className={styles.addressType}>Home</p>
+        <p className={styles.addressType}>Дом</p>
         <p>{street}</p>
         <p>{city}</p>
         <p>{floor}</p>
@@ -49,10 +49,10 @@ function Instructions() {
 
   return (
     <div className={styles.instructions}>
-      <label htmlFor="instructions">Delivery instuctions</label>
+      <label htmlFor="instructions">Пожелания по доставке</label>
       <input
         id="instructions"
-        placeholder="Your request..."
+        placeholder="Ваш запрос...."
         value={deliveryInstructions}
         onChange={handleInstructionsChange}
       />
@@ -70,7 +70,7 @@ function LeaveAt() {
   return (
     <label htmlFor="leaveAt" className={styles.leaveAtBox}>
       <ion-icon name="home-outline"></ion-icon>
-      <p>Leave at the door</p>
+      <p>Оставить возле двери</p>
       <input
         id="leaveAt"
         type="checkbox"

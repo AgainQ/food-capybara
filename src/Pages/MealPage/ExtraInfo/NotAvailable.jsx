@@ -8,16 +8,17 @@ export default function NotAvailable() {
   return (
     <div className={styles.notAvailable}>
       <HeadingTertiary>
-        <label>If this product not available</label>
+        <label>Если этой еды нет в наличии</label>
       </HeadingTertiary>
 
       <select
         className={styles.select}
         value={ifNotAvailable}
-        onChange={e => setIfNotAvailable(e.target.value)}
+        onChange={(e) => setIfNotAvailable(e.target.value)}
       >
-        <option>Remove it from order</option>
-        <option>Call me</option>
+        <option>Удалить из заказа</option>
+        <option>Написать в телеграм</option>
+        <option>Позвонить</option>
       </select>
     </div>
   );

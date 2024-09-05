@@ -43,6 +43,7 @@
 .terms {
   font-size: 1.4rem;
   padding: 1.6rem 0;
+  line-height: 1.2;
 }
 
 .termsLink:link,

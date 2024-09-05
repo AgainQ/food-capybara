@@ -1,5 +1,6 @@
 import { useCartStore } from '../../Stores/CartStore';
 import { useDeliveryStore } from '../../Stores/DeliveryStore';
+import { formatPrice } from '../../Utils/utils';
 
 import ButtonPrimary from '../ButtonPrimary/ButtonPrimary';
 import styles from './CtaBase.module.css';
@@ -16,11 +17,11 @@ export default function CtaBase({ btnText, onClick }) {
     <div className={styles.ctaBox}>
       <div className={styles.textBox}>
         <p>
-          <span>Total </span>
-          <span className={styles.including}>{`(incl. fees and taxes)`}</span>
+          <span>Итого </span>
+          <span className={styles.including}>{`(включая доставку и чаевые)`}</span>
         </p>
 
-        <p>{`฿ ${totalPrice}.00`}</p>
+        <p>{formatPrice(totalPrice)}</p>
       </div>
 
       <ButtonPrimary className="block" onClick={onClick}>

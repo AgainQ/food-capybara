@@ -5,8 +5,8 @@ import styles from './HeaderBase.module.css';
 
 export default function HeaderBase({
   heading,
-  text = 'Restaurant name',
-  icon = 'close',
+  text = 'Sushi Village',
+  icon = 'arrow-back', // close
   className,
 }) {
   const navigate = useNavigate();

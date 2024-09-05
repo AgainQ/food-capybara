@@ -1,5 +1,6 @@
 import { useDeliveryStore } from '../../../Stores/DeliveryStore';
 import HeadingTertiary from '../../../UI/HeadingTertiary/HeadingTertiary';
+import { formatPrice } from '../../../Utils/utils';
 import styles from './RiderTip.module.css';
 export default function RiderTip() {
   return (
@@ -16,9 +17,9 @@ function TextBox() {
       <ion-icon name="wallet-outline"></ion-icon>
 
       <div>
-        <HeadingTertiary>Tip your rider</HeadingTertiary>
+        <HeadingTertiary>Чаевые курьеру</HeadingTertiary>
         <p className={styles.text}>
-          100% of the tips go to your rider, we don't deduct anything from it.
+          100% чаевых идут курьеру. Мы ничего не забираем из этих денег
         </p>
       </div>
     </div>
@@ -52,7 +53,7 @@ function Tip({ tip }) {
       className={`${styles.tip} ${isSelected && styles.selected}`}
       onClick={handleClick}
     >
-      {tip.value === 0 ? 'Not now' : `฿ ${tip.value}.00`}
+      {tip.value === 0 ? 'Не сейчас' : formatPrice(tip.value)}
     </button>
   );
 }

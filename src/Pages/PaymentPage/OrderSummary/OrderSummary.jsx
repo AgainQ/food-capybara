@@ -3,6 +3,7 @@ import { useCartStore } from '../../../Stores/CartStore';
 import styles from './OrderSummary.module.css';
 import HeadingTertiary from '../../../UI/HeadingTertiary/HeadingTertiary';
 import { useDeliveryStore } from '../../../Stores/DeliveryStore';
+import { formatPrice } from '../../../Utils/utils';
 
 export default function OrderSummary() {
   return (
@@ -49,16 +50,16 @@ function PriceDetails() {
   return (
     <ul className={styles.priceDetails}>
       <li>
-        <span>Subtotal</span>
-        <span>{`฿ ${itemsTotalPrice}.00`}</span>
+        <span>Промежуточный итог</span>
+        <span>{formatPrice(itemsTotalPrice)}</span>
       </li>
       <li>
-        <span>{`${delType} delivery`}</span>
-        <span>{delPrice === 0 ? 'Free' : `฿ ${delPrice}.00`}</span>
+        <span>{`${delType} доставка`}</span>
+        <span>{delPrice === 0 ? 'Free' : formatPrice(delPrice)}</span>
       </li>
       <li>
-        <span>Rider tip</span>
-        <span>{`฿ ${riderTip.value}.00`}</span>
+        <span>Чаевые курьеру</span>
+        <span>{formatPrice(riderTip.value)}</span>
       </li>
     </ul>
   );
@@ -67,9 +68,9 @@ function PriceDetails() {
 function AgreeTerms() {
   return (
     <p className={styles.terms}>
-      By completing this order, I agree to all{' '}
+      Совершив этот заказ вы соглашаетесь со всеми условиями{' '}
       <a className={styles.termsLink} href="placeholder.org">
-        terms & conditions
+        всеми условиями
       </a>
       .
     </p>

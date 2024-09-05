@@ -4,7 +4,7 @@ import OrdersPreview from './OrdersPreview/OrdersPreview';
 export default function OrdersPage() {
   return (
     <div>
-      <HeaderBase heading="Orders" />
+      <HeaderBase heading="Заказы" />
       <OrdersPreview />
     </div>
   );

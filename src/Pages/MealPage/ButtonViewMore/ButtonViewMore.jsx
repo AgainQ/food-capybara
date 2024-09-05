@@ -7,7 +7,7 @@ export default function ButtonViewMore({
   className = '',
 }) {
   function handleClick() {
-    setIsOpen(isOpen => !isOpen);
+    setIsOpen((isOpen) => !isOpen);
   }
 
   return (

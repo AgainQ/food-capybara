@@ -16,8 +16,8 @@ export default function BoughtTogether() {
       <div className={styles.boughtTogether}>
         <header className={styles.header}>
           <div>
-            <HeadingTertiary>Frequently bought together</HeadingTertiary>
-            <p className={styles.text}>Other customers also ordered these</p>
+            <HeadingTertiary>Часто покупают вместе</HeadingTertiary>
+            <p className={styles.text}>Другие покупатели также заказывали</p>
           </div>
 
           <Tag />

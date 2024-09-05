@@ -22,13 +22,19 @@ export default function CartPage() {
 
   if (itemsInCart.length > 0)
     return (
-      <div style={{ minHeight: '100vh' }}>
-        <HeaderBase heading="Cart" text="Restaurant name" />
+      <div
+        style={{
+          minHeight: '100vh',
+          position: 'relative',
+          paddingBottom: itemsInCart.length >= 2 ? '11rem' : '0',
+        }}
+      >
+        <HeaderBase heading="Корзина" text="Sushi Village" />
         <Delivery />
         <CartItems />
-        <CtaBase btnText="Review payment and address" onClick={handleClick} />
         <Recommendations />
         <PriceDetails />
+        <CtaBase btnText="Перейти к оплате" onClick={handleClick} />
 
         {/* <ReviewPayment /> */}
       </div>

@@ -1,5 +1,5 @@
 const testAddress = {
-  street: 'Улица Пушкинаб 48',
+  street: 'Улица Пушкина, 48',
   city: 'Москва',
   floor: '5 этаж',
 };

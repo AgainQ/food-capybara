@@ -9,7 +9,7 @@ export default function DeliveryOptions() {
 
   return (
     <div className={styles.box}>
-      <HeadingTertiary>Delivery options</HeadingTertiary>
+      <HeadingTertiary>Варианты доставки</HeadingTertiary>
 
       <ul className={styles.deliveryOptions}>
         {deliveryOptions.map((option) => (

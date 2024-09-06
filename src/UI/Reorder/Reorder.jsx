@@ -12,7 +12,7 @@ import styles from './Reorder.module.css';
 export default function Reorder() {
   const resetReorderStore = useReorderStore((state) => state.resetReorderStore);
   const { orderId } = useReorderStore();
-  const { order = {}, isPending } = useGetOrder(orderId);
+  const { order = {} } = useGetOrder(orderId);
   const { items = [] } = order;
 
   function handleAddToCart() {
@@ -31,10 +31,10 @@ export default function Reorder() {
 
         <div className={styles.btnGroup}>
           <ButtonPrimary className="block" onClick={handleAddToCart}>
-            Add to cart
+            Добавить в корзину
           </ButtonPrimary>
           <ButtonPrimary className="block" onClick={handleBackToMenu}>
-            Back to menu
+            Вернуться в меню
           </ButtonPrimary>
         </div>
       </div>

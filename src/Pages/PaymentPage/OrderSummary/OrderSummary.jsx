@@ -8,7 +8,7 @@ import { formatPrice } from '../../../Utils/utils';
 export default function OrderSummary() {
   return (
     <div className={styles.box}>
-      <HeadingTertiary>Order summary</HeadingTertiary>
+      <HeadingTertiary>Заказ</HeadingTertiary>
 
       <ItemsList />
       <PriceDetails />
@@ -55,7 +55,7 @@ function PriceDetails() {
       </li>
       <li>
         <span>{`${delType} доставка`}</span>
-        <span>{delPrice === 0 ? 'Free' : formatPrice(delPrice)}</span>
+        <span>{delPrice === 0 ? 'Бесплатно' : formatPrice(delPrice)}</span>
       </li>
       <li>
         <span>Чаевые курьеру</span>
@@ -66,10 +66,15 @@ function PriceDetails() {
 }
 
 function AgreeTerms() {
+  // temporary deactivate link
+  function handleClick(e) {
+    e.preventDefault();
+  }
+
   return (
     <p className={styles.terms}>
-      Совершив этот заказ вы соглашаетесь со всеми условиями{' '}
-      <a className={styles.termsLink} href="placeholder.org">
+      Совершив этот заказ вы соглашаетесь со{' '}
+      <a className={styles.termsLink} href="placeholder.org" onClick={handleClick}>
         всеми условиями
       </a>
       .

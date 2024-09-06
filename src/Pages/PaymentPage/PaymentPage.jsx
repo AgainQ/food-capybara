@@ -34,8 +34,6 @@ export default function PaymentPage() {
         minHeight: '100vh',
         // position: 'relative',
         paddingBottom: '11rem',
-        height: '100%',
-        overflowY: 'auto',
       }}
     >
       <HeaderBase heading="Оплата" className="colorGrey" />

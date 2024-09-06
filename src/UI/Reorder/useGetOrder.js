@@ -8,6 +8,6 @@ export function useGetOrder(id) {
     error,
   } = useQuery({ queryFn: () => getOrderApi(id), queryKey: ['order'] });
 
-  console.log(order);
+  // console.log(order);
   return { order, isPending, error };
 }

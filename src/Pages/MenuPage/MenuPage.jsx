@@ -13,6 +13,7 @@ export default function MenuPage() {
       <Header />
       <Menu />
 
+      {/* мб сделать render, только если выбран order */}
       <Reorder />
       <ViewCart />
     </div>

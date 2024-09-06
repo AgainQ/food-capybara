@@ -25,8 +25,9 @@ export default function CartPage() {
       <div
         style={{
           minHeight: '100vh',
-          position: 'relative',
+          // position: 'relative',
           paddingBottom: itemsInCart.length >= 2 ? '11rem' : '0',
+          backgroundColor: '#fff',
         }}
       >
         <HeaderBase heading="Корзина" text="Sushi Village" />

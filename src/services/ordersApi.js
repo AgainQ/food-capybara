@@ -16,7 +16,7 @@ export async function getOrders() {
 
 export async function getOrder(id) {
   if (!id) {
-    console.log('no id');
+    // console.log('no id');
     throw new Error('Order ID is null or undefined');
   }
 

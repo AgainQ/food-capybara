@@ -74,6 +74,7 @@
 /*  */
 
 .tip {
+  color: var(--color-grey);
   padding: 0.6rem 1.4rem;
   background-color: #fff;
 

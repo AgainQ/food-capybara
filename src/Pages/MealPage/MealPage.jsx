@@ -23,7 +23,7 @@ export default function MealPage() {
 
   if (activeMeal)
     return (
-      <div style={{ position: 'relative' }}>
+      <div>
         <ButtonBack />
         <Details />
         <Toppings />

@@ -9,9 +9,6 @@
   width: 100%;
   z-index: 100;
   background-color: #fff;
-
-  /* test */
-  padding-top: env(safe-area-inset-top); /* Add safe area padding */
 }
 
 .text {

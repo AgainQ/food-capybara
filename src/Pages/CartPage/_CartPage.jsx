@@ -26,7 +26,7 @@ export default function CartPage() {
         style={{
           minHeight: '100vh',
           // position: 'relative',
-          paddingBottom: itemsInCart.length >= 2 ? '11rem' : '0',
+          paddingBottom: '11rem',
           backgroundColor: '#fff',
         }}
       >

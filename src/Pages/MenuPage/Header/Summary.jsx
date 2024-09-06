@@ -1,5 +1,5 @@
 // import { useEffect, useState } from 'react';
-// import WebApp from '@twa-dev/sdk';
+import WebApp from '@twa-dev/sdk';
 import { formatPrice } from '../../../Utils/utils';
 import Button from './Button';
 import styles from './Summary.module.css';
@@ -8,7 +8,7 @@ export default function Summary({ restaurantInfo }) {
   const { minOrder = '' } = restaurantInfo;
 
   // const [userData, setUserData] = useState(null);
-
+  WebApp.disableVerticalSwipes();
   // useEffect(() => {
   //   console.log(WebApp);
   //   const tgUser = WebApp.initDataUnsafe.user;

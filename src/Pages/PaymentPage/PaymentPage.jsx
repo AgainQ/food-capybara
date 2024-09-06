@@ -32,7 +32,7 @@ export default function PaymentPage() {
       style={{
         backgroundColor: '#F7F7F7',
         minHeight: '100vh',
-        position: 'relative',
+        // position: 'relative',
         paddingBottom: '11rem',
       }}
     >

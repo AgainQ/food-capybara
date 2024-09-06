@@ -1,7 +1,7 @@
 .box {
   position: sticky;
   bottom: 0;
-  padding: 1.6rem 2.4rem 2.4rem;
+  padding: 1.6rem 2.4rem 3.2rem;
   background-color: #fff;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.2);
   border-radius: 12px;
